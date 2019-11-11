@@ -53,6 +53,7 @@ end
 gem 'haml-rails'
 gem 'bootstrap-sass','~>3.3.6'
 gem 'modernizr-rails'
+gem 'rails-controller-testing'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

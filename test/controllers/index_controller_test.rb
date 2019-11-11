@@ -13,6 +13,12 @@ class IndexControllerTest < ActionDispatch::IntegrationTest
   test "should get contact" do
     get index_contact_url
     assert_response :success
+
+    assert_template layout: 'application'
+
+    assert_select 'title', 'Meal Planner'
+    assert_select 'h1', 'Contact Us'
+    assert_select 'p', 'Complete the form to send an email to our support team.'
   end
 
 end
