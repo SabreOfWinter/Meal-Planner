@@ -32,3 +32,8 @@
 en:
   app_title: Meal Planner
   app_description: A place to plan and store your meals
+
+  index:
+    home:
+      title: Home
+      welcome: Welcome Home!
