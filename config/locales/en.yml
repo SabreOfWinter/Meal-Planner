@@ -50,3 +50,7 @@ en:
       message: "Message:"
       enter_message: Message
       submit: Contact Us
+
+  request_contact:
+    no_email: You must enter an email address
+    email_sent: Thank you for your response. We will quickly get back to you.
