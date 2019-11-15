@@ -55,6 +55,10 @@ gem 'bootstrap-sass','~>3.3.6'
 gem 'modernizr-rails'
 gem 'rails-controller-testing'
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'

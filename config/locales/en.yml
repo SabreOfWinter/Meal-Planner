@@ -54,3 +54,9 @@ en:
   request_contact:
     no_email: You must enter an email address
     email_sent: Thank you for your response. We will quickly get back to you.
+
+  navbar:
+    title: SiteName
+    home: Home
+    calculator: Meal calculator
+    contact: Contact Us

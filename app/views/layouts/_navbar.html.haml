@@ -1,0 +1,27 @@
+%nav.navbar.nav-tabs
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand=t("navbar.title")
+    #myNavbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          =link_to t("navbar.home"), root_path
+
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", role: "button"}
+            =t("navbar.calculator")
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Day
+              %a{:href => "#"} Week
+        %li
+          = link_to "Ingredients", '\index\contact'
+        %li
+          = link_to "Meals", '\index\contact'
+        %li
+          = link_to "Contact", '\index\contact'

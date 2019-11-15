@@ -18,15 +18,67 @@
 @import "bootstrap";
 
 $font: 'Times New Roman', 'Times', serif;
-$color: #ADADAD;
+$color-dark-green: #006F4F;
+$color-light-green: #00A871;
+$color-pale-green: #E9FEF4;
+$color-gold: #DEB887;
 
 body {
   font-family: $font;
-  background-color: $color;
+  background-color: $color-pale-green;
   margin: 10px;
   padding: 10px;
 }
 
 h1 {
   text-transform: uppercase;
+}
+
+nav {
+  background-color: $color-dark-green;
+
+  ul{
+    padding: 0;
+    list-style: none;
+    background: $color-light-green;
+
+    li{
+      display: inline-block;
+      position: relative;
+      line-height: 21px;
+      text-align: left;
+      color:#fff;
+    }
+
+    li a:hover{
+      color: #fff;
+      background: $color-gold
+    }
+
+    li ul.dropdown{
+      min-width: $color-pale-green;
+      background: #f2f2f2;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+    }
+
+    li:hover ul.dropdown{
+      display: block;
+    }
+
+    li ul.dropdown li{
+      display: block;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-light-green;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  left: 0px;
+  bottom: 0px;
 }
