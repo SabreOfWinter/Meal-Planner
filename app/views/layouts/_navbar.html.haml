@@ -17,11 +17,30 @@
             %span.caret
           %ul.dropdown-menu
             %li
-              %a{:href => "#"} Day
-              %a{:href => "#"} Week
+              %a{:href => "#"}= t("navbar.calculator_1")
+              %a{:href => "#"}= t("navbar.calculator_2")
         %li
-          = link_to "Ingredients", '\index\contact'
+          = link_to t("navbar.ingredients_list"), '\index\contact'
         %li
-          = link_to "Meals", '\index\contact'
+          = link_to t("navbar.meals_list"), '\index\contact'
         %li
-          = link_to "Contact", '\index\contact'
+          = link_to t("navbar.contact"), '\index\contact'
+        %li
+          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} Sign in
+        %li
+          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} Register
+
+#myModal.modal
+  .modal-dialog
+    .modal-content
+      / Modal Header
+      .modal-header
+        %h4.modal-title Modal Heading
+        %button.close{"data-dismiss" => "modal", type: "button"} ×
+      / Modal body
+      .modal-body
+        Modal body..
+      / Modal footer
+      .modal-footer
+        %button.btn
+        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Close

@@ -59,4 +59,8 @@ en:
     title: SiteName
     home: Home
     calculator: Meal calculator
+    calculator_1: Day
+    calculator_2: Week
+    ingredients_list: Ingredients
+    meals_list: Meals
     contact: Contact Us
