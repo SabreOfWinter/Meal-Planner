@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'index#home'
   get 'index/contact', to: 'index#contact'
   post 'request_contact', to: 'index#request_contact'
