@@ -16,9 +16,15 @@
     = csrf_meta_tags
 
   %body
-
+    <!-- Will load only the navbar if the user is on the log in page -->
+    - unless action_name == "new"
+      = render :partial => 'layouts/navbar'
 
     - flash.each do |key, value|
       = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
 
     = yield
+
+    <!-- Will load only the footer if the user is on the log in page -->
+    - unless action_name == "new"
+      = render :partial => 'layouts/footer'

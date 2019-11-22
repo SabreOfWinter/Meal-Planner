@@ -1,9 +1,6 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
-  layout "application"
-  before_action :authenticate_user!
-  layout "logged_in"
-  
+
   # GET /meals
   # GET /meals.json
   def index

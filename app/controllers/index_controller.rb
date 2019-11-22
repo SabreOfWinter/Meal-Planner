@@ -1,8 +1,4 @@
 class IndexController < ApplicationController
-  layout "application"
-  before_action :authenticate_user!
-  layout "logged_in"
-
 
   def home
 
