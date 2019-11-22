@@ -26,9 +26,11 @@
         %li
           = link_to t("navbar.contact"), '\index\contact'
         %li
-          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} Sign in
+          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} awd
         %li
-          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} Register
+          =link_to 'Register', '\users\sign_up'
+        %li
+          = link_to 'sign_out', '\sign_out'
 
 #myModal.modal
   .modal-dialog
