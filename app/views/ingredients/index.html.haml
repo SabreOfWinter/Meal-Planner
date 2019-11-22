@@ -1,0 +1,41 @@
+%h1 Listing ingredients
+
+%table
+  %thead
+    %tr
+      %th Meal
+      %th Name
+      %th Amount
+      %th Energy
+      %th Fat
+      %th Saturates
+      %th Carbohydrates
+      %th Sugar
+      %th Fibre
+      %th Protein
+      %th Salt
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ingredients.each do |ingredient|
+      %tr
+        %td= ingredient.meal
+        %td= ingredient.name
+        %td= ingredient.amount
+        %td= ingredient.energy
+        %td= ingredient.fat
+        %td= ingredient.saturates
+        %td= ingredient.carbohydrates
+        %td= ingredient.sugar
+        %td= ingredient.fibre
+        %td= ingredient.protein
+        %td= ingredient.salt
+        %td= link_to 'Show', ingredient
+        %td= link_to 'Edit', edit_ingredient_path(ingredient)
+        %td= link_to 'Destroy', ingredient, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Ingredient', new_ingredient_path

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Meal:
+  = @ingredient.meal
+%p
+  %b Name:
+  = @ingredient.name
+%p
+  %b Amount:
+  = @ingredient.amount
+%p
+  %b Energy:
+  = @ingredient.energy
+%p
+  %b Fat:
+  = @ingredient.fat
+%p
+  %b Saturates:
+  = @ingredient.saturates
+%p
+  %b Carbohydrates:
+  = @ingredient.carbohydrates
+%p
+  %b Sugar:
+  = @ingredient.sugar
+%p
+  %b Fibre:
+  = @ingredient.fibre
+%p
+  %b Protein:
+  = @ingredient.protein
+%p
+  %b Salt:
+  = @ingredient.salt
+
+= link_to 'Edit', edit_ingredient_path(@ingredient)
+\|
+= link_to 'Back', ingredients_path
