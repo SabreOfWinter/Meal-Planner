@@ -6,6 +6,15 @@
 %p
   %b Description:
   = @meal.description
+%p
+  %b Recipe:
+  = @meal.recipe
+%p
+  %b Public:
+  = @meal.public
+%p
+  %b User:
+  = @meal.user
 
 = link_to 'Edit', edit_meal_path(@meal)
 \|

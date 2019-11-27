@@ -1,10 +1,13 @@
-%h1 Meals
+%h1 Listing meals
 
 %table
   %thead
     %tr
       %th Name
       %th Description
+      %th Recipe
+      %th Public
+      %th User
       %th
       %th
       %th
@@ -14,6 +17,9 @@
       %tr
         %td= meal.name
         %td= meal.description
+        %td= meal.recipe
+        %td= meal.public
+        %td= meal.user
         %td= link_to 'Show', meal
         %td= link_to 'Edit', edit_meal_path(meal)
         %td= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' }

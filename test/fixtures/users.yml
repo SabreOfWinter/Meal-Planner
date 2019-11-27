@@ -7,6 +7,7 @@
 one:
 # column: value
   email: abc@gmail.com
+  encrypted_password: Abcd123
 two:
 # column: value
   email: def@gmail.com

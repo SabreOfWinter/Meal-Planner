@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class IndexControllerTest < ActionDispatch::IntegrationTest
+
   test "should get home" do
     if :user_signed_in?
       get root_url
