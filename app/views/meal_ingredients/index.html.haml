@@ -1,0 +1,25 @@
+%h1 Listing meal_ingredients
+
+%table
+  %thead
+    %tr
+      %th Ingredient
+      %th Meal
+      %th Amount
+      %th
+      %th
+      %th
+
+  %tbody
+    - @meal_ingredients.each do |meal_ingredient|
+      %tr
+        %td= meal_ingredient.ingredient
+        %td= meal_ingredient.meal
+        %td= meal_ingredient.amount
+        %td= link_to 'Show', meal_ingredient
+        %td= link_to 'Edit', edit_meal_ingredient_path(meal_ingredient)
+        %td= link_to 'Destroy', meal_ingredient, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Meal ingredient', new_meal_ingredient_path
