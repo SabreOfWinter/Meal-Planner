@@ -1,7 +1,7 @@
 class Meal < ApplicationRecord
-  validates :name, null: false
-  validates :description, null: false
-  validates :recipe, null: false
+  validates :name, presence: true, null: false
+  validates :description, allow_blank: true, format: { with: /\A[a-zA-Z]+\z/, message: "only accepts letters"}
 
-  belongs_to :user
+  has_one :users
+  has_many :meal_ingredients
 end

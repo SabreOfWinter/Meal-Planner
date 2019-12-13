@@ -36,7 +36,7 @@ en:
   index:
     home:
       title: Home
-      welcome: Welcome Home!
+      welcome: Welcome Home
     contact:
       title: Contact Us
       contact_us: Complete the form to send an email to our support team.

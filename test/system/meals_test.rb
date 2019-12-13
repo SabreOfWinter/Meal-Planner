@@ -18,7 +18,7 @@ class MealsTest < ApplicationSystemTestCase
     fill_in "Name", with: @meal.name
     check "Public" if @meal.public
     fill_in "Recipe", with: @meal.recipe
-    fill_in "User", with: @meal.user_id
+    fill_in "User", with: @meal.user
     click_on "Create Meal"
 
     assert_text "Meal was successfully created"
@@ -33,7 +33,7 @@ class MealsTest < ApplicationSystemTestCase
     fill_in "Name", with: @meal.name
     check "Public" if @meal.public
     fill_in "Recipe", with: @meal.recipe
-    fill_in "User", with: @meal.user_id
+    fill_in "User", with: @meal.user
     click_on "Update Meal"
 
     assert_text "Meal was successfully updated"

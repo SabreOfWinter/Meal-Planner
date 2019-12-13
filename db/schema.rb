@@ -10,17 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_235825) do
+ActiveRecord::Schema.define(version: 2019_11_28_024247) do
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount"
+    t.integer "energy"
+    t.decimal "fat"
+    t.decimal "saturates"
+    t.decimal "carbohydrates"
+    t.decimal "sugar"
+    t.decimal "fibre"
+    t.decimal "protein"
+    t.decimal "salt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meal_ingredients", force: :cascade do |t|
+    t.integer "ingredient_id"
+    t.integer "meal_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_id"], name: "index_meal_ingredients_on_ingredient_id"
+    t.index ["meal_id"], name: "index_meal_ingredients_on_meal_id"
+  end
 
   create_table "meals", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.text "recipe"
     t.boolean "public"
-    t.integer "user_id"
+    t.integer "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_meals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

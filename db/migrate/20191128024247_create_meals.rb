@@ -5,7 +5,7 @@ class CreateMeals < ActiveRecord::Migration[5.2]
       t.text :description
       t.text :recipe
       t.boolean :public
-      t.belongs_to :user, foreign_key: true
+      t.integer :user
 
       t.timestamps
     end

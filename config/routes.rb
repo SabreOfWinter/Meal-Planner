@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :plan_meals
+  resources :meals
   resources :ingredients
   resources :meal_ingredients
-  resources :meals
   devise_for :users
 
   devise_scope :user do

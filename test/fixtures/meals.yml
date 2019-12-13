@@ -5,11 +5,11 @@ one:
   description: MyText
   recipe: MyText
   public: false
-  user: one
+  user: 1
 
 two:
   name: MyString
   description: MyText
   recipe: MyText
   public: false
-  user: two
+  user: 1

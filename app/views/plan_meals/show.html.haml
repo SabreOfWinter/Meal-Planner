@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Meal:
+  = @plan_meal.meal
+%p
+  %b Dayplan:
+  = @plan_meal.dayplan
+
+= link_to 'Edit', edit_plan_meal_path(@plan_meal)
+\|
+= link_to 'Back', plan_meals_path
