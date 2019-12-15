@@ -20,6 +20,7 @@
     = f.check_box :public
   .field
     = f.label :user
-    = f.text_field :user, value: current_user.id, disabled: true
+    = f.text_field :user, value: current_user.email, disabled: true
+    = f.text_field :user, value: current_user.id, readonly: true, hidden: true
   .actions
     = f.submit 'Save'
