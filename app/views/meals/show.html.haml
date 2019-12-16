@@ -35,7 +35,7 @@
       %th
       %th
 
--if MealIngredient.find(MealIngredient.where(meal_id: @meal.id).ids).size == 0
+-if MealIngredient.find(MealIngredient.where(meal_id: @meal.id).ids).size != 0
   %tbody
     - MealIngredient.find(MealIngredient.where(meal_id: @meal.id).ids).each do |mealingredient|
       %tr
@@ -51,8 +51,8 @@
         %td= mealingredient.ingredient.salt
         %td= link_to 'Show', mealingredient.ingredient
         %td= link_to 'Edit', edit_ingredient_path(mealingredient.ingredient)
-        %td= link_to 'Destroy', mealingredient.ingredient, method: :delete, data: { confirm: 'Are you sure?' }
-
+        %td= link_to 'Destroy', mealingredient, method: :delete, data: { confirm: 'Are you sure?' }
+        %br
 %p
   = link_to 'Add Ingredient', meal_ingredients_path
 
