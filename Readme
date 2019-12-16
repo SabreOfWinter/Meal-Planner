@@ -3,7 +3,7 @@ To login use one of two options
 	1. Use one of the accounts available
 	 - (ACCOUNT 1) email: bs00645@surrey.ac.uk password: Abcdefg
 	 - (ACCOUNT 2) email: test@email.com password: Abcdef
-	2. Create account 
+	2. Create account
 	 -Click the 'sign_up'
 	 -Enter email with this format (e.g 'AZ0@email.com')
 	 -Enter password (At least 6 characters)
@@ -11,9 +11,13 @@ To login use one of two options
 
 Pages
 -------------------------------------------------------------------------------------------------------
--Ingredients 
+-Ingredients
 	-Table showing all ingredients stored, they are not dependent on user
 -Meals
-	-Table showing all public and private meals of the signed in user, and all public meals from 		other users 
+	-Table showing all public and private meals of the signed in user, and all public meals from 		other users
 	-Going to 'show' you will see the ingredient table for that specific meal
 	-Adding an Ingredient will take you to Meal_Ingredients (here you can assign an ingredient to 		a meal)
+
+
+GitHub repository
+https://github.com/SabreOfWinter/Meal-Planner
