@@ -25,7 +25,6 @@ class MealIngredientsController < ApplicationController
   # POST /meal_ingredients.json
   def create
     @meal_ingredient = MealIngredient.new(meal_ingredient_params)
-
     respond_to do |format|
       if @meal_ingredient.save
         format.html { redirect_to @meal_ingredient, notice: 'Meal ingredient was successfully created.' }
@@ -65,6 +64,7 @@ class MealIngredientsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_meal_ingredient
       @meal_ingredient = MealIngredient.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

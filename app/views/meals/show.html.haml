@@ -16,7 +16,7 @@
   %b User:
   = User.find(@meal.user).email
   %br
-  = MealIngredient.find(1).ingredient.name
+
 
 %table
   %thead
@@ -54,7 +54,7 @@
         %td= link_to 'Destroy', mealingredient.ingredient, method: :delete, data: { confirm: 'Are you sure?' }
 
 %p
-  = link_to 'Add Ingredient', root_path
+  = link_to 'Add Ingredient', meal_ingredients_path
 
 = link_to 'Edit', edit_meal_path(@meal)
 \|

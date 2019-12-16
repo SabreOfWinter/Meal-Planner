@@ -16,8 +16,8 @@
     = f.label :amount
     = f.number_field :amount
   .field
-    = f.label :user
-    = f.text_field :user, value: current_user.email, disabled: true
-    = f.text_field :user, value: current_user.id, readonly: true, hidden: false
+    = f.label :user_id
+    = f.text_field :user_id, value: current_user.email, disabled: true
+    = f.number_field :user_id, value: current_user.id, hidden: true
   .actions
     = f.submit 'Save'
