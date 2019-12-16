@@ -1,5 +1,6 @@
-%h1 New meal
+%h1
+  = t('.title')
 
 = render 'form'
 
-= link_to 'Back', meals_path
+= link_to t('.back'), meals_path

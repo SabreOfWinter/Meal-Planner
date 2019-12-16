@@ -37,6 +37,10 @@ en:
     home:
       title: Home
       welcome: Welcome Home
+      you_have: You currently have
+      meal: meal(s)
+      there_are: There are currently
+      ingredient: ingredient(s)
     contact:
       title: Contact Us
       contact_us: Complete the form to send an email to our support team.
@@ -64,3 +68,113 @@ en:
     ingredients_list: Ingredients
     meals_list: Meals
     contact: Contact Us
+
+  ingredients:
+    form:
+      save: Save
+    edit:
+      title: Edit ingredient
+      show: Show
+      back: Back
+    index:
+      title: Ingredients
+      name: Name
+      amount: Amount
+      energy: Energy
+      fat: Fat
+      saturates: Saturates
+      carbohydrates: Carbohydrates
+      sugar: Sugar
+      fibre: Fibre
+      protein: Protein
+      salt: Salt
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      confirm: Are you sure?
+      new: New Ingredient
+    new:
+      title: Create new ingredient
+      back: Back
+    show:
+      name: Name
+      amount: Amount
+      energy: Energy
+      fat: Fat
+      saturates: Saturates
+      carbohydrates: Carbohydrates
+      sugar: Sugar
+      fibre: Fibre
+      protein: Protein
+      salt: Salt
+      edit: Edit
+      back: Back
+
+  meal_ingredients:
+    form:
+      save: Save
+    edit:
+      title: Edit ingredient of meal
+      show: Show
+      back: Back
+    index:
+      title: Ingredients of Meals
+      ingredient: Ingredient
+      meal: Meal
+      amount: Amount
+      user: User
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      confirm: Are you sure?
+      new: Add ingredient to meal
+    new:
+      title:  Ingredient to be added to meal
+      back: Back
+    show:
+      edit: Edit
+      back: Back
+
+  meals:
+    form:
+      save: Save
+    edit:
+      title: Edit meal
+      show: Show
+      back: Back
+    index:
+      title: Meals
+      name: Name
+      description: Description
+      recipe: Recipe
+      public: Public
+      user: User
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      confirm: Are you sure?
+      new: Add Meal
+    new:
+      title: New meal
+      back: Back
+    show:
+      name: Name
+      description: Description
+      recipe: Recipe
+      public: Public
+      user: User
+      amount: Amount
+      energy: Energy
+      fat: Fat
+      saturates: Saturates
+      carbohydrates: Carbohydrates
+      sugar: Sugar
+      fibre: Fibre
+      protein: Protein
+      salt: Salt
+      edit: Edit
+      back: Back
+      show: Show
+      destroy: Destroy
+      confirm: Are you sure?
+      add: Add Ingredient

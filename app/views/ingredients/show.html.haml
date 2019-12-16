@@ -1,36 +1,46 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b
+    = t('.name') + ':'
   = @ingredient.name
 %p
-  %b Amount:
+  %b
+    = t('.amount') + ':'
   = @ingredient.amount
 %p
-  %b Energy:
+  %b
+    = t('.energy') + ':'
   = @ingredient.energy
 %p
-  %b Fat:
+  %b
+    = t('.fat') + ':'
   = @ingredient.fat
 %p
-  %b Saturates:
+  %b
+    = t('.saturates') + ':'
   = @ingredient.saturates
 %p
-  %b Carbohydrates:
+  %b
+    = t('.carbohydrates') + ':'
   = @ingredient.carbohydrates
 %p
-  %b Sugar:
+  %b
+    = t('.sugar') + ':'
   = @ingredient.sugar
 %p
-  %b Fibre:
+  %b
+    = t('.fibre') + ':'
   = @ingredient.fibre
 %p
-  %b Protein:
+  %b
+    = t('.protein') + ':'
   = @ingredient.protein
 %p
-  %b Salt:
+  %b
+    = t('.salt') + ':'
   = @ingredient.salt
 
-= link_to 'Edit', edit_ingredient_path(@ingredient)
+= link_to t("edit"), edit_ingredient_path(@ingredient)
 \|
-= link_to 'Back', ingredients_path
+= link_to t("back"), ingredients_path

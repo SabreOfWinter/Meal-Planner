@@ -1,2 +1,14 @@
 %h1=t('.title')
-%p=t('.welcome') + " " + current_user.email
+%p
+  = t('.welcome')
+  = current_user.email
+
+%p
+  = t('.you_have')
+  = Meal.where(user: current_user).size
+  = t('.meal')
+
+%p
+  = t('.there_are')
+  = Ingredient.all.size
+  = t('.ingredient')

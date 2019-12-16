@@ -12,6 +12,6 @@
 %p
   %b User:
   = User.find(@meal_ingredient.user_id).email
-= link_to 'Edit', edit_meal_ingredient_path(@meal_ingredient)
+= link_to t('.edit'), edit_meal_ingredient_path(@meal_ingredient)
 \|
-= link_to 'Back', meal_ingredients_path
+= link_to t('.back'), meal_ingredients_path

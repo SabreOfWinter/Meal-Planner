@@ -1,7 +1,8 @@
-%h1 Editing ingredient
+%h1
+  = t('.title')
 
 = render 'form'
 
-= link_to 'Show', @ingredient
+= link_to t('.show'), @ingredient
 \|
-= link_to 'Back', ingredients_path
+= link_to t('.back'), ingredients_path

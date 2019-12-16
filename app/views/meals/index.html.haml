@@ -1,13 +1,19 @@
-%h1 Listing meals
+%h1
+  = t('.title')
 
 %table
   %thead
     %tr
-      %th Name
-      %th Description
-      %th Recipe
-      %th Public
-      %th User
+      %th
+        = t('.name')
+      %th
+        = t('.description')
+      %th
+        = t('.recipe')
+      %th
+        = t('.public')
+      %th
+        = t('.user')
       %th
       %th
       %th
@@ -20,10 +26,10 @@
         %td= meal.recipe
         %td= meal.public
         %td= User.find(meal.user).email
-        %td= link_to 'Show', meal
-        %td= link_to 'Edit', edit_meal_path(meal)
-        %td= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), meal
+        %td= link_to t('.edit'), edit_meal_path(meal)
+        %td= link_to t('.destroy'), meal, method: :delete, data: { confirm: t('.confirm') }
 
 %br
 
-= link_to 'New Meal', new_meal_path
+= link_to t('.new'), new_meal_path

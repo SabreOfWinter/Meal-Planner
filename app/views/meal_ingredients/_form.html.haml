@@ -20,4 +20,4 @@
     = f.text_field :user_id, value: current_user.email, disabled: true
     = f.number_field :user_id, value: current_user.id, hidden: true
   .actions
-    = f.submit 'Save'
+    = f.submit t('.save')

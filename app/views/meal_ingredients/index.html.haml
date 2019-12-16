@@ -1,12 +1,17 @@
-%h1 Ingredients of Meals
+%h1
+  = t('.title')
 
 %table
   %thead
     %tr
-      %th Ingredient
-      %th Meal
-      %th Amount
-      %th User
+      %th
+        = t('.ingredient')
+      %th
+        = t('.meal')
+      %th
+        = t('.amount')
+      %th
+        = t('.user')
       %th
       %th
 
@@ -17,10 +22,10 @@
         %td= meal_ingredient.meal.name
         %td= meal_ingredient.amount
         %td= User.find(meal_ingredient.user_id).email
-        %td= link_to 'Show', meal_ingredient
-        %td= link_to 'Edit', edit_meal_ingredient_path(meal_ingredient)
-        %td= link_to 'Destroy', meal_ingredient, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), meal_ingredient
+        %td= link_to t('.edit'), edit_meal_ingredient_path(meal_ingredient)
+        %td= link_to t('.destroy'), meal_ingredient, method: :delete, data: { confirm: t('.confirm') }
 
 %br
 
-= link_to 'New Meal ingredient', new_meal_ingredient_path
+= link_to t('.new'), new_meal_ingredient_path
