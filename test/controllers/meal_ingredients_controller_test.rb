@@ -2,7 +2,14 @@ require 'test_helper'
 
 class MealIngredientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @meal_ingredient = meal_ingredients(:one)
+    @meal = meals(:one)
+    @ingredient = ingredients(:one)
+    @meal_ingredient = MealIngredient.new()
+    @meal_ingredient.ingredient = @ingredient
+    @meal_ingredient.meal = @meal
+    @meal_ingredient.amount = 1
+    @meal_ingredient.user_id = @meal.user
+    @meal_ingredient.save
   end
 
   test "should get index" do

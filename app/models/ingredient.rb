@@ -10,5 +10,5 @@ class Ingredient < ApplicationRecord
   validates :protein, numericality: {greater_than: 0}
   validates :salt, numericality: {greater_than: 0}
 
-  has_many :meal_ingredient
+  has_many :meal_ingredient, dependent: :destroy
 end

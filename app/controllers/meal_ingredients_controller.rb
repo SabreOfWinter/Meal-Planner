@@ -4,17 +4,24 @@ class MealIngredientsController < ApplicationController
   # GET /meal_ingredients
   # GET /meal_ingredients.json
   def index
-    @meal_ingredients = MealIngredient.all
+    @meal_ingredients = MealIngredient.user_meal_ingredients(current_user.id)
   end
 
   # GET /meal_ingredients/1
   # GET /meal_ingredients/1.json
   def show
+
   end
 
   # GET /meal_ingredients/new
   def new
-    @meal_ingredient = MealIngredient.new
+    if Ingredient.all.size != 0 and Meal.where(user: current_user.id).size != 0
+      @meal_ingredient = MealIngredient.new
+    elsif Ingredient.all.size == 0
+        redirect_to meal_ingredients_path, notice: 'No ingredients found'
+    elsif Meal.where(user: current_user.id).size == 0
+        redirect_to meal_ingredients_path, notice: 'No meals found'
+    end
   end
 
   # GET /meal_ingredients/1/edit

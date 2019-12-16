@@ -3,6 +3,7 @@ require 'test_helper'
 class MealsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @meal = meals(:one)
+
   end
 
   test "should get index" do

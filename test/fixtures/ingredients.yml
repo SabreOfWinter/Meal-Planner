@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  amount: 1
-  energy: 1
-  fat: 9.99
-  saturates: 9.99
-  carbohydrates: 9.99
-  sugar: 9.99
-  fibre: 9.99
-  protein: 9.99
-  salt: 9.99
+  name: "Carrot"
+  amount: 10
+  energy: 1.0
+  fat: 1.0
+  saturates: 1.0
+  carbohydrates: 1.0
+  sugar: 1.0
+  fibre: 1.0
+  protein: 1.0
+  salt: 1.0
 
 two:
-  name: MyString
+  name: "MyString"
   amount: 1
   energy: 1
   fat: 9.99

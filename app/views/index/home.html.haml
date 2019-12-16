@@ -3,7 +3,7 @@
   = t('.welcome')
   = current_user.email
 
-%p
+%p{:id => "mealSize"}
   = t('.you_have')
   = Meal.where(user: current_user).size
   = t('.meal')

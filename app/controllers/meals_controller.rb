@@ -1,10 +1,11 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
 
+
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    @meals = Meal.user_and_public_meals(current_user.id)
   end
 
   # GET /meals/1
