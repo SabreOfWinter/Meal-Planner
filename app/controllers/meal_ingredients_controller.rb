@@ -10,7 +10,9 @@ class MealIngredientsController < ApplicationController
   # GET /meal_ingredients/1
   # GET /meal_ingredients/1.json
   def show
-
+    if :user_id != current_user.id
+      redirect_to meal_ingredients_path
+    end
   end
 
   # GET /meal_ingredients/new
