@@ -1,19 +1,6 @@
 require 'test_helper'
 
 class IngredientTest < ActiveSupport::TestCase
-  # validates :name, uniqueness: true, presence:true
-  # validates :amount, numericality: {greater_than: 0}
-  # validates :energy, numericality: {greater_than: 0}
-  # validates :fat, numericality: {greater_than: 0}
-  # validates :saturates, numericality: {greater_than: 0}
-  # validates :carbohydrates, numericality: {greater_than: 0}
-  # validates :sugar, numericality: {greater_than: 0}
-  # validates :fibre, numericality: {greater_than: 0}
-  # validates :protein, numericality: {greater_than: 0}
-  # validates :salt, numericality: {greater_than: 0}
-  #
-  # has_many :meal_ingredient
-
   test "should save valid ingredient" do
      ingredient = Ingredient.new()
 
@@ -67,7 +54,7 @@ class IngredientTest < ActiveSupport::TestCase
 
     ingredient2.save
 
-    refute ingredient.valid?
+    refute ingredient2.valid?
   end
 
   test "should not save ingredient if name is empty" do
