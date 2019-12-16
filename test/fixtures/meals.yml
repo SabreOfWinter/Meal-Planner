@@ -4,7 +4,7 @@ one:
   name: MealOne
   description: Lovely description
   recipe: 1step one 2step two
-  public: false
+  public: true
   user: 1
 
 two:

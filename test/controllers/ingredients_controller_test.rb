@@ -17,11 +17,10 @@ class IngredientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create ingredient" do
-    assert_difference('Ingredient.count') do
-      post ingredients_url, params: { ingredient: { amount: @ingredient.amount, carbohydrates: @ingredient.carbohydrates, energy: @ingredient.energy, fat: @ingredient.fat, fibre: @ingredient.fibre, name: @ingredient.name, protein: @ingredient.protein, salt: @ingredient.salt, saturates: @ingredient.saturates, sugar: @ingredient.sugar } }
+    assert_difference('Ingredient.count', 0) do
+      post ingredients_url, params: { ingredient: { id:@ingredient.id, amount: @ingredient.amount, carbohydrates: @ingredient.carbohydrates, energy: @ingredient.energy, fat: @ingredient.fat, fibre: @ingredient.fibre, name: @ingredient.name, protein: @ingredient.protein, salt: @ingredient.salt, saturates: @ingredient.saturates, sugar: @ingredient.sugar } }
     end
-
-    assert_redirected_to ingredient_url(Ingredient.last)
+    assert_response 200
   end
 
   test "should show ingredient" do

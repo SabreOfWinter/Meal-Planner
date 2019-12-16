@@ -16,6 +16,11 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get edit" do
+    get edit_meal_url(@meal)
+    assert_response :success
+  end
+
   test "should create meal" do
     assert_difference('Meal.count') do
       post meals_url, params: { meal: { description: @meal.description, name: @meal.name, public: @meal.public, recipe: @meal.recipe, user: @meal.user } }
@@ -24,19 +29,14 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to meal_url(Meal.last)
   end
 
-  test "should show meal" do
-    get meal_url(@meal)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_meal_url(@meal)
-    assert_response :success
-  end
-
   test "should update meal" do
     patch meal_url(@meal), params: { meal: { description: @meal.description, name: @meal.name, public: @meal.public, recipe: @meal.recipe, user: @meal.user } }
     assert_redirected_to meal_url(@meal)
+  end
+
+  test "should show meal" do
+    get meal_url(@meal)
+    assert_response :success
   end
 
   test "should destroy meal" do

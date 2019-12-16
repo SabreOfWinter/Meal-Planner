@@ -36,19 +36,23 @@ h1 {
 
 tbody{width: 100%}
 th {
-  padding-right: 25px;
   background-color: $color-dark-green;
   color: #fff;
+}
+
+td,th{
+  width:6%;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 tr:nth-child(even) {background-color: #C9EBC8}
 tr:hover {background-color: $color-gold}
 
 
-
 nav {
   background-color: $color-light-green;//$color-dark-green;
-
+  width: 100%;
   ul{
     padding: 0;
     list-style: none;

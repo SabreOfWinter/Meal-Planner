@@ -69,6 +69,6 @@ class IngredientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ingredient_params
-      params.require(:ingredient).permit(:name, :amount, :energy, :fat, :saturates, :carbohydrates, :sugar, :fibre, :protein, :salt)
+      params.require(:ingredient).permit(:id, :name, :amount, :energy, :fat, :saturates, :carbohydrates, :sugar, :fibre, :protein, :salt)
     end
 end

@@ -11,7 +11,7 @@ class MealsController < ApplicationController
   # GET /meals/1
   # GET /meals/1.json
   def show
-    if :user != current_user.id
+    if :user != current_user.id and :public == false
       redirect_to meals_path
     end
   end

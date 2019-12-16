@@ -28,23 +28,6 @@
         %li
           = link_to "Meal ing", '\meal_ingredients'
         %li
-          %a.button{"data-toggle" => "modal", "data-target" => "#myModal"} awd
-        %li
           =link_to 'Register', '\users\sign_up'
         %li
           = link_to 'sign_out', '\sign_out'
-
-#myModal.modal
-  .modal-dialog
-    .modal-content
-      / Modal Header
-      .modal-header
-        %h4.modal-title Modal Heading
-        %button.close{"data-dismiss" => "modal", type: "button"} ×
-      / Modal body
-      .modal-body
-        Modal body..
-      / Modal footer
-      .modal-footer
-        %button.btn
-        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Close

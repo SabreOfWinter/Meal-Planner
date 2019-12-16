@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: "Carrot"
   amount: 10
   energy: 1.0
@@ -13,13 +14,14 @@ one:
   salt: 1.0
 
 two:
+  id: 2
   name: "MyString"
   amount: 1
   energy: 1
-  fat: 9.99
-  saturates: 9.99
-  carbohydrates: 9.99
-  sugar: 9.99
-  fibre: 9.99
-  protein: 9.99
-  salt: 9.99
+  fat: 9.9
+  saturates: 9.9
+  carbohydrates: 9.9
+  sugar: 9.9
+  fibre: 9.9
+  protein: 9.9
+  salt: 9.9

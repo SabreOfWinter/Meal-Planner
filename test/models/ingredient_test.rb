@@ -1,29 +1,18 @@
 require 'test_helper'
 
 class IngredientTest < ActiveSupport::TestCase
+
   test "should save valid ingredient" do
-     @ingredient = Ingredient.new()
+     ingredient = ingredients(:one)
 
-     @ingredient.name = "Carrot"
-     @ingredient.amount = 1
-     @ingredient.energy = 1.0
-     @ingredient.fat = 1.0
-     @ingredient.saturates = 1.0
-     @ingredient.carbohydrates = 1.0
-     @ingredient.sugar = 1.0
-     @ingredient.fibre = 1.0
-     @ingredient.protein = 1.0
-     @ingredient.salt = 1.0
+     ingredient.save
 
-     @ingredient.save
-
-     assert @ingredient.valid?
+     assert ingredient.valid?
   end
 
   test "should not save ingredient if name is duplicate" do
     ingredient = Ingredient.new()
 
-    ingredient.id = 1
     ingredient.name = "Carrot"
     ingredient.amount = 1
     ingredient.energy = 1.0
@@ -34,12 +23,10 @@ class IngredientTest < ActiveSupport::TestCase
     ingredient.fibre = 1.0
     ingredient.protein = 1.0
     ingredient.salt = 1.0
-
     ingredient.save
 
     ingredient2 = Ingredient.new()
 
-    ingredient2.id = 1
     ingredient2.name = "Carrot"
     ingredient2.amount = 1
     ingredient2.energy = 1.0
@@ -50,7 +37,6 @@ class IngredientTest < ActiveSupport::TestCase
     ingredient2.fibre = 1.0
     ingredient2.protein = 1.0
     ingredient2.salt = 1.0
-
     ingredient2.save
 
     refute ingredient2.valid?
