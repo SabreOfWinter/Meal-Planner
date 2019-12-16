@@ -20,7 +20,7 @@
 
   %tbody
     - @meals.each do |meal|
-      %tr{"data-toggle" => "modal", "data-id" => meal, "data-target" => "#myModal"}
+      %tr
         %td= meal.name
         %td= meal.description
         %td= meal.recipe
@@ -33,19 +33,3 @@
 %br
 
 = link_to t('.new'), new_meal_path
-
-
-#myModal.modal
-  .modal-dialog
-    .modal-content
-      / Modal Header
-      .modal-header
-        %h4.modal-title
-        %button.close{"data-dismiss" => "modal", type: "button"} ×
-      / Modal body
-      .modal-body
-        Modal body..
-      / Modal footer
-      .modal-footer
-        %button.btn
-        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Close
