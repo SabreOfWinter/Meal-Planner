@@ -1,11 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ingredient: one
-  meal: one
+  ingredient: 2
+  meal: 1
   amount: 1
-
+  user_id: 1
 two:
-  ingredient: two
-  meal: two
+  ingredient: 2
+  meal: 2
   amount: 1
+  user_id: 2

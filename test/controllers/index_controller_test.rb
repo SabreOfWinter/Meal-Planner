@@ -9,7 +9,8 @@ class IndexControllerTest < ActionDispatch::IntegrationTest
 
       assert_select 'title', 'Meal Planner'
       assert_select 'h1', 'Home'
-      assert_select 'p', 'Welcome Home abc@gmail.com'
+      assert_select 'p', 'Welcome Home
+abc@gmail.com'
     end
   end
 

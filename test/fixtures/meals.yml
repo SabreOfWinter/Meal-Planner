@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  recipe: MyText
+  name: MealOne
+  description: Lovely description
+  recipe: 1step one 2step two
   public: false
   user: 1
 

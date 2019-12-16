@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :plan_meals
   resources :meals
   resources :ingredients
   resources :meal_ingredients
-  devise_for :users
 
+
+  devise_for :users
   devise_scope :user do
     get '/sign_in', to: 'devise/sessions#new'
     get '/sign_out', to: 'devise/sessions#destroy'

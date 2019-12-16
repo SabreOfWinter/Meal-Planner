@@ -13,24 +13,24 @@
 ActiveRecord::Schema.define(version: 2019_12_16_000721) do
 
   create_table "ingredients", force: :cascade do |t|
-    t.string "name"
-    t.integer "amount"
-    t.integer "energy"
-    t.decimal "fat"
-    t.decimal "saturates"
-    t.decimal "carbohydrates"
-    t.decimal "sugar"
-    t.decimal "fibre"
-    t.decimal "protein"
-    t.decimal "salt"
+    t.string "name", null: false
+    t.integer "amount", null: false
+    t.integer "energy", null: false
+    t.decimal "fat", null: false
+    t.decimal "saturates", null: false
+    t.decimal "carbohydrates", null: false
+    t.decimal "sugar", null: false
+    t.decimal "fibre", null: false
+    t.decimal "protein", null: false
+    t.decimal "salt", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "meal_ingredients", force: :cascade do |t|
-    t.integer "meal_id"
-    t.integer "ingredient_id"
-    t.integer "amount"
+    t.integer "meal_id", null: false
+    t.integer "ingredient_id", null: false
+    t.integer "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -39,11 +39,11 @@ ActiveRecord::Schema.define(version: 2019_12_16_000721) do
   end
 
   create_table "meals", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.text "recipe"
-    t.boolean "public"
-    t.integer "user"
+    t.string "name", null: false
+    t.text "description", null: false
+    t.text "recipe", null: false
+    t.boolean "public", default: false
+    t.integer "user", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

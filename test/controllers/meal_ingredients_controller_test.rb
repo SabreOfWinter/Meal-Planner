@@ -17,7 +17,7 @@ class MealIngredientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create meal_ingredient" do
     assert_difference('MealIngredient.count') do
-      post meal_ingredients_url, params: { meal_ingredient: { amount: @meal_ingredient.amount, ingredient_id: @meal_ingredient.ingredient_id, meal_id: @meal_ingredient.meal_id } }
+      post meal_ingredients_url, params: { meal_ingredient: { amount: @meal_ingredient.amount, ingredient_id: @meal_ingredient.ingredient_id, meal_id: @meal_ingredient.meal_id, user_id: @meal_ingredient.user_id } }
     end
 
     assert_redirected_to meal_ingredient_url(MealIngredient.last)
@@ -34,7 +34,7 @@ class MealIngredientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update meal_ingredient" do
-    patch meal_ingredient_url(@meal_ingredient), params: { meal_ingredient: { amount: @meal_ingredient.amount, ingredient_id: @meal_ingredient.ingredient_id, meal_id: @meal_ingredient.meal_id } }
+    patch meal_ingredient_url(@meal_ingredient), params: { meal_ingredient: { amount: @meal_ingredient.amount, ingredient_id: @meal_ingredient.ingredient_id, meal_id: @meal_ingredient.meal_id, user_id: @meal_ingredient.user_id } }
     assert_redirected_to meal_ingredient_url(@meal_ingredient)
   end
 
